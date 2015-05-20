@@ -30,7 +30,7 @@ class MongoTool:
 
         return results
 
-class AwsTool:
+class ec2_volume:
     #获取某个AWS账号下所有region的所有volumes
     def getAllVolumes(self,aws_access_key_id,aws_secret_access_key):
         try:
@@ -75,6 +75,6 @@ class AwsTool:
 
 if __name__ == '__main__':
     #get volumes and load into mongodb
-    volumes = AwsTool().getAllVolumes()
+    volumes = ec2_volume().getAllVolumes()
     mongoTool = MongoTool(mongo-host,port)
     mongoTool.insertOrUpdateVolumes(volumes)
