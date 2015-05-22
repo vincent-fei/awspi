@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<p>User list in MySQL host 127.0.0.1:3306</p>
+	</head>
+	<body>
+		{% for user in users %}
+			<p>Name: {{ user }}</p>
+		{% endfor %}
+	</body>
+</html>

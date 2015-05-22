@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<p>Show User Metadata of request Client</p>
+	</head>
+	<body>
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">          
+        <!-- jQuery -->
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.js"></script>          
+        <!-- DataTables -->
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.dataTables.js"></script>
+	    <script type="text/javascript" charset="utf8">
+			$(document).ready( function () {
+				$('#t_userdata').DataTable();
+		    } );
+		</script>
+		
+		<table id="t_userdata" class="display" border="1" cellspacing="1" width="100%">
+			<thead>
+				<tr>
+					<th>Key</th>
+					<th>Value</th>
+				</tr>
+			</thead>					
+			<tbody>	
+                {% for k,v in user_data %}	
+				<tr>
+					<td>{{ k }}</td>
+					<td>{{ v }}</td>
+				</tr>
+                {% endfor %}
+			</tbody>			
+		</table>
+	<hr>
+    <p>&copy; imbusy.me</p>
+	</body>
+</html>
