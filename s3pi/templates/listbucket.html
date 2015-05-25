@@ -1,43 +1,43 @@
 <html>
-	<head>
-		<p><b>List your s3 bucket objects</b></p>
-	</head>
-	<body>
+    <head>
+        <p><b>List your s3 bucket objects</b></p>
+    </head>
+    <body>
         <!-- DataTables CSS -->
         <link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">
         <!-- jQuery -->
         <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.js"></script>
         <!-- DataTables -->
         <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.dataTables.js"></script>
-	    <script type="text/javascript" charset="utf8">
-			$(document).ready( function () {
-				$('#t_s3list').DataTable();
-		    } );
-		</script>
+        <script type="text/javascript" charset="utf8">
+            $(document).ready( function () {
+                $('#t_s3list').DataTable();
+            } );
+        </script>
 
-		<table id="t_s3list" class="display" border="1" cellspacing="1" width="100%" >
-			<thead>
-				<tr>
-					<th align="left">Name</th>
-					<th align="left">Object Name</th>
-				</tr>
-			</thead>
+        <table id="t_s3list" class="display" border="1" cellspacing="1" width="100%" >
+            <thead>
+                <tr>
+                    <th align="left">Name</th>
+                    <th align="left">Object Name</th>
+                </tr>
+            </thead>
             <tfoot>
                 <tr>
                     <th align="left">Name</th>
                     <th align="left">Object Name</th>
                 </tr>
             </tfoot>
-			<tbody>
+            <tbody>
                 {% for object in object_list %}
-				<tr>
-					<td>Object</td>
-					<td>{{ object }}</td>
-				</tr>
+                <tr>
+                    <td>Object</td>
+                    <td>{{ object }}</td>
+                </tr>
                 {% endfor %}
-			</tbody>
-		</table>
-	<hr>
+            </tbody>
+        </table>
+    <hr>
     <p>&copy; imbusy.me 2013-2015</p>
-	</body>
+    </body>
 </html>
