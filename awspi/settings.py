@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'awspi',
-    's3tools',
     's3pi',
     'ec2pi',
     'rdspi',

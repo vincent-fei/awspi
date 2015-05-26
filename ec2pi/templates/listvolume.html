@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<p><b>List All of your EBS volumes</b></p>
+	</head>
+	<body>
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">          
+        <!-- jQuery -->
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.js"></script>          
+        <!-- DataTables -->
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.dataTables.js"></script>
+	    <script type="text/javascript" charset="utf8">
+			$(document).ready( function () {
+				$('#t_table').DataTable();
+		    } );
+		</script>
+		
+		<table id="t_table" class="display" border="1" cellspacing="1" width="100%" >				
+			<tbody>	
+                {% for volume in volumes %}	
+				<tr>
+					{% for k,v in volume.items %}
+						<td>{{ v }}</td>
+					{% endfor %}
+				</tr>
+                {% endfor %}
+			</tbody>			
+		</table>
+	<hr>
+    <p>&copy; imbusy.me 2013-2016</p>
+	</body>
+</html>
