@@ -22,7 +22,7 @@ def ListInstances(request):
 	cursor.close()
 	conn.close()
 	return render_to_response('listinstance.html',{'instances':instances})
-	
+
 def ListVolumes(request):
 	# get all volumes
 	# 连接数据库　
