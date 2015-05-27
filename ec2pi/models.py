@@ -13,9 +13,9 @@ class Instances(models.Model):
 	PublicIP = models.CharField(max_length=15)
 	VpcID = models.CharField(max_length=12)
 	SubnetID = models.CharField(max_length=15)
-	AmiID = models.CharField(max_length=12)
-	LaunchTime = models.CharField(max_length=24)
+	AmiID = models.CharField(max_length=12)	
 	VirtualizationType =  models.CharField(max_length=24)
+	LaunchTime = models.CharField(max_length=24)
 	def __unicode__(self):
 		return self.InstanceID
 	
@@ -25,10 +25,10 @@ class Volumes(models.Model):
 	VolumeSize = models.CharField(max_length=5)
 	AttachState = models.CharField(max_length=5)
 	VolumeIOPS = models.CharField(max_length=6)
-	VolumeZone = models.CharField(max_length=18)
-	CreateTime = models.CharField(max_length=24)
+	VolumeZone = models.CharField(max_length=18)	
 	Project = models.CharField(max_length=30)
 	InstanceID = models.CharField(max_length=10)
 	SnapshotID = models.CharField(max_length=10)
+	CreateTime = models.CharField(max_length=24)
 	def __unicode__(self):
 		return self.VolumeID
