@@ -4,6 +4,7 @@ from django.shortcuts import render, render_to_response
 # Create your views here.
 import boto
 from boto import ec2
+from boto.exception import EC2ResponseError
 
 class ec2pi:
     def getAllInstances(self):
