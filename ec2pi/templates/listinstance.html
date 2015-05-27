@@ -13,14 +13,47 @@
 			$(document).ready( function () {
 				$('#t_table').DataTable();
 		    } );
-		</script>
-		
-		<table id="t_table" class="display" border="1" cellspacing="1" width="100%" >				
+		</script>		
+        <table id="t_table" class="display" border="1" cellspacing="1" width="100%" >
+            <thead>
+                <tr>
+                    <th align="left">InstanceID</th>
+                    <th align="left">Name</th>
+					<th align="left">Project</th>
+					<th align="left">InstanceType</th>
+					<th align="left">Status</th>
+					<th align="left">Placement</th>
+                    <th align="left">PrivateIP</th>
+					<th align="left">PublicIP</th>
+					<th align="left">VpcID</th>
+					<th align="left">SubnetID</th>
+					<th align="left">ImageID</th>
+					<th align="left">VirtualizationType</th>
+					<th align="left">LaunchTime</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th align="left">InstanceID</th>
+                    <th align="left">Name</th>
+					<th align="left">Project</th>
+					<th align="left">InstanceType</th>
+					<th align="left">Status</th>
+					<th align="left">Placement</th>
+                    <th align="left">PrivateIP</th>
+					<th align="left">PublicIP</th>
+					<th align="left">VpcID</th>
+					<th align="left">SubnetID</th>
+					<th align="left">ImageID</th>
+					<th align="left">VirtualizationType</th>
+					<th align="left">LaunchTime</th>
+                </tr>
+            </tfoot>			
 			<tbody>	
                 {% for instance in instances %}	
 				<tr>
-					{% for k,v in instance.items %}
-						<td>{{ v }}</td>
+					{% for i in instance %}
+						<td>{{ i }}</td>
 					{% endfor %}
 				</tr>
                 {% endfor %}

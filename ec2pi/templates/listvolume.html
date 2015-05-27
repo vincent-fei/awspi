@@ -14,13 +14,40 @@
 				$('#t_table').DataTable();
 		    } );
 		</script>
-		
-		<table id="t_table" class="display" border="1" cellspacing="1" width="100%" >				
+        <table id="t_table" class="display" border="1" cellspacing="1" width="100%" >
+            <thead>
+                <tr>
+                    <th align="left">VolumeID</th>
+                    <th align="left">VolumeType</th>
+					<th align="left">VolumeSize</th>
+					<th align="left">AttachState</th>
+					<th align="left">VolumeIOPS</th>
+					<th align="left">VolumeZone</th>
+                    <th align="left">Project</th>
+					<th align="left">InstanceID</th>
+					<th align="left">SnapshotID</th>
+					<th align="left">CreateTime</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th align="left">VolumeID</th>
+                    <th align="left">VolumeType</th>
+					<th align="left">VolumeSize</th>
+					<th align="left">AttachState</th>
+					<th align="left">VolumeIOPS</th>
+					<th align="left">VolumeZone</th>
+                    <th align="left">Project</th>
+					<th align="left">InstanceID</th>
+					<th align="left">SnapshotID</th>
+					<th align="left">CreateTime</th>
+                </tr>
+            </tfoot>			
 			<tbody>	
                 {% for volume in volumes %}	
 				<tr>
-					{% for k,v in volume.items %}
-						<td>{{ v }}</td>
+					{% for i in volume %}
+						<td>{{ i }}</td>
 					{% endfor %}
 				</tr>
                 {% endfor %}
