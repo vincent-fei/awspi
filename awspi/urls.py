@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^listbucket/$', 's3pi.views.get_object', name='get_object'),
     url(r'^listinstance/$', 'ec2pi.views.ListInstances', name='ListInstances'),
     url(r'^listvolume/$', 'ec2pi.views.ListVolumes', name='ListVolumes'),
+    url(r'^listip/$', 'ec2pi.views.ListIP', name='ListIP'),
 ]

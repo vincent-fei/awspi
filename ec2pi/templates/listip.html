@@ -1,11 +1,47 @@
 <html>
-    <head>List all your public addresses</head>
+    <head>
+        <p><b>List All of your IP addresses</b></p>
+    </head>
     <body>
-        <p>
-            This is a paagraph
-        </p>
-        <p>
-            This is P2
-        </p>
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">
+        <!-- jQuery -->
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.js"></script>
+        <!-- DataTables -->
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf8">
+            $(document).ready( function () {
+                $('#t_table').DataTable();
+            } );
+        </script>
+        <table id="t_table" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th align="left">公网IP</th>
+                    <th align="left">私网IP</th>
+                    <th align="left">关联实例ID</th>
+                    <th align="left">关联网卡ID</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+					<th align="left">公网IP</th>
+                    <th align="left">私网IP</th>
+                    <th align="left">关联实例ID</th>
+                    <th align="left">关联网卡ID</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                {% for address in addresses %}
+                <tr>
+                    {% for i in address %}
+                        <td>{{ i }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <hr>
+    <p>&copy; imbusy.me 2013-2016</p>
     </body>
 </html>
