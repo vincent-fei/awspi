@@ -4,9 +4,9 @@
     </head>
     <body>
         <!-- DataTables CSS -->
-        <link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">          
+        <link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">
         <!-- jQuery -->
-        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.js"></script>          
+        <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.js"></script>
         <!-- DataTables -->
         <script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.dataTables.js"></script>
         <script type="text/javascript" charset="utf8">
@@ -42,16 +42,16 @@
                     <th align="left">来源快照ID</th>
                     <th align="left">创建时间</th>
                 </tr>
-            </tfoot>            
-            <tbody> 
-                {% for volume in volumes %} 
+            </tfoot>
+            <tbody>
+                {% for volume in volumes %}
                 <tr>
                     {% for i in volume %}
                         <td>{{ i }}</td>
                     {% endfor %}
                 </tr>
                 {% endfor %}
-            </tbody>            
+            </tbody>
         </table>
     <hr>
     <p>&copy; imbusy.me 2013-2016</p>

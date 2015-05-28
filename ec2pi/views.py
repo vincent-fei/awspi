@@ -66,27 +66,27 @@ class DBConnector(object):
 
 
 def ListInstances(request):
-	# get all instances
-	mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
-	#查询出数据
-	sql = "select * from ec2pi_instances;"
-	instances = mysql.query(sql)
+    # get all instances
+    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
+    #查询出数据
+    sql = "select * from ec2pi_instances;"
+    instances = mysql.query(sql)
 
-	return render_to_response('listinstance.html',{'instances':instances})
+    return render_to_response('listinstance.html',{'instances':instances})
 
 def ListVolumes(request):
-	# get all volumes
-	# 连接数据库　
-	mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
-	#查询出数据
-	sql = "select * from ec2pi_volumes;"
-	volumes = mysql.query(sql)
+    # get all volumes
+    # 连接数据库　
+    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
+    #查询出数据
+    sql = "select * from ec2pi_volumes;"
+    volumes = mysql.query(sql)
 
-	return render_to_response('listvolume.html',{'volumes':volumes})
+    return render_to_response('listvolume.html',{'volumes':volumes})
 
 def ListIP(request):
-	mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
-	sql = "select * from ec2pi_addresses;"
-	addresses = mysql.query(sql)
+    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
+    sql = "select * from ec2pi_addresses;"
+    addresses = mysql.query(sql)
 
-	return render_to_response('listip.html',{'addresses':addresses})
+    return render_to_response('listip.html',{'addresses':addresses})
