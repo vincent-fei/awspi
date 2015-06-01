@@ -68,7 +68,6 @@ class DBConnector(object):
 def ListInstances(request):
     # get all instances
     mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
-    #查询出数据
     sql = "select * from ec2pi_instances;"
     instances = mysql.query(sql)
 
@@ -76,9 +75,7 @@ def ListInstances(request):
 
 def ListVolumes(request):
     # get all volumes
-    # 连接数据库　
     mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
-    #查询出数据
     sql = "select * from ec2pi_volumes;"
     volumes = mysql.query(sql)
 
