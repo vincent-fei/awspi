@@ -67,7 +67,8 @@ class DBConnector(object):
 
 def ListInstances(request):
     # get all instances
-    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
+    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi',
+                        passwd='changyou.com', db='awspi', charset='utf8')
     sql = "select * from ec2pi_instances;"
     instances = mysql.query(sql)
 
@@ -75,14 +76,16 @@ def ListInstances(request):
 
 def ListVolumes(request):
     # get all volumes
-    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
+    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi',
+                        passwd='changyou.com', db='awspi', charset='utf8')
     sql = "select * from ec2pi_volumes;"
     volumes = mysql.query(sql)
 
     return render_to_response('listvolume.html',{'volumes':volumes})
 
 def ListIP(request):
-    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi', passwd='changyou.com', db='awspi', charset='utf8')
+    mysql = DBConnector(host='127.0.0.1', port=3306, user='awspi',
+                        passwd='changyou.com', db='awspi', charset='utf8')
     sql = "select * from ec2pi_addresses;"
     addresses = mysql.query(sql)
 
